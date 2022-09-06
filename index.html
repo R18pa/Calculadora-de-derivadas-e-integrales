@@ -3,20 +3,24 @@
     <title>Calculadora</title>
 </head>
 <body>
-coeficiente = int(input("coeficiente: "))
-variable = input("variable: ")
-exponente = int(input("exponente: "))
+<form action="">
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+        <input type="button" value="suma" onclick="alert( suma(10,50));">
+    </form>
 
-#TERMINO
-print("Su termino es: ",coeficiente,variable,"^",exponente)
+    <script>
+        var suma = function (numero1, numero2){
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
 
-#DERIVADA
-coeficiente1= coeficiente * exponente
-exponente1= exponente - 1
-print("Su derivada es: ",coeficiente1,variable,"^",exponente1)
+            var resultado = numero1 - numero2;
 
-#INTEGRAL
-exponente2=exponente+1
-print("Su integral es: ", coeficiente,"/",exponente2,variable,"^",exponente2)    
+            return resultado;
+        }
+
+
+    </script>
+
 </body>
 </html>
